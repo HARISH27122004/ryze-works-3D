@@ -1,0 +1,131 @@
+/* ── Footer.css ── */
+
+footer {
+  background: white;
+  padding: 100px 36px 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.footer-col h4 {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.footer-col address {
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text);
+  font-weight: 400;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 15px;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 2;
+  transition: color 0.2s;
+}
+.footer-col a:hover {
+  color: var(--muted);
+}
+
+/* ── Newsletter ── */
+.newsletter-col h3 {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.email-input-wrap {
+  display: flex;
+  align-items: center;
+  background: #f0f2f7;
+  border-radius: 100px;
+  padding: 6px 8px 6px 24px;
+  gap: 12px;
+}
+
+.email-input-wrap input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text);
+  outline: none;
+}
+.email-input-wrap input::placeholder {
+  color: #bbb;
+}
+
+.email-btn {
+  width: 40px;
+  height: 40px;
+  background: var(--dark);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  flex-shrink: 0;
+  color: white;
+  font-size: 18px;
+  transition: background 0.2s, transform 0.2s;
+}
+.email-btn:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* ── Footer Bottom ── */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 28px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.scroll-top-btn {
+  width: 48px;
+  height: 48px;
+  background: var(--dark);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  color: white;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+.scroll-top-btn:hover {
+  transform: scale(1.1) translateY(-3px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,7 @@
+.footer-scroll-wrapper {
+  position: relative;
+  /* clip-path and opacity set by JS */
+  will-change: clip-path, opacity;
+  /* Smooth the reveal */
+  transition: clip-path 0.05s linear, opacity 0.05s linear;
+}

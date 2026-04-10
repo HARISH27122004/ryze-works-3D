@@ -1,0 +1,138 @@
+/* ── About.css ── */
+
+.about-section {
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;    /* anchor for the SVG */
+  overflow: hidden;      /* clip the path ends that go off-screen */
+  padding: 120px 36px;
+}
+
+/* ── Full-width scroll-driven cyan curve ─────────────────────────────────────
+   Sits absolutely over the entire section, behind text (z-index: 0).
+   Width & height fill the section exactly.
+   stroke-dashoffset driven 100% by JS — zero CSS animation here.
+   ─────────────────────────────────────────────────────────────────────────── */
+.cyan-curve {
+  position: absolute;
+  inset: 0;               /* top:0 right:0 bottom:0 left:0 */
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+/* ── Heading ─────────────────────────────────────────────────────────────── */
+.about-heading {
+  position: relative;
+  z-index: 1;             /* above the curve */
+  font-size: clamp(60px, 9vw, 130px);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+/* ── Body grid ─────────────────────────────────────────────────────────────*/
+.about-body {
+  position: relative;
+  z-index: 1;             /* above the curve */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ── Device Frame ─────────────────────────────────────────────────────────*/
+.about-media {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.device-frame {
+  background: #111;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
+  transform: perspective(1200px) rotateY(4deg) rotateX(-2deg);
+  transition: transform 0.6s ease;
+}
+.device-frame:hover {
+  transform: perspective(1200px) rotateY(0deg) rotateX(0deg);
+}
+
+.device-screen {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Astronaut Scene ──────────────────────────────────────────────────────*/
+.astronaut-scene {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 50% 60%, #1a2a4a 0%, #060a14 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.earth-glow {
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 80%;
+  background: radial-gradient(
+    ellipse,
+    rgba(0, 120, 255, 0.35) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 60% 10%, white, transparent),
+    radial-gradient(1px 1px at 80% 50%, white, transparent),
+    radial-gradient(1px 1px at 40% 80%, white, transparent),
+    radial-gradient(1px 1px at 10% 60%, white, transparent),
+    radial-gradient(1px 1px at 90% 20%, white, transparent);
+}
+
+.astro-figure {
+  font-size: 80px;
+  position: relative;
+  z-index: 2;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(0, 200, 255, 0.5));
+}
+
+/* ── About Text ──────────────────────────────────────────────────────────*/
+.about-text p {
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.65;
+  color: #333;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────*/
+@media (max-width: 900px) {
+  .about-body {
+    grid-template-columns: 1fr;
+  }
+}
+

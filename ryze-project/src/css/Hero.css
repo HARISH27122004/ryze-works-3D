@@ -1,0 +1,100 @@
+/* ── Hero.css ── */
+
+.hero {
+  min-height: 100vh;
+  padding: 120px 36px 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.hero-tagline {
+  font-size: clamp(22px, 2.8vw, 38px);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.9s ease forwards 0.3s;
+  width: 50%;
+}
+
+.hero-canvas {
+  width: 95%;
+  height: 65vh;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background: #0d0d0d;
+  cursor: none;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 0.6s;
+}
+
+.hero-canvas-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas#heroCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0 0;
+}
+
+
+.scroll-label {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 900;
+  text-align: center;
+}
+
+.plus-mark {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+@media (max-width: 640px) {
+  .hero-tagline {
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 100%;
+  }
+
+  .center-plus {
+    display: none;
+  }
+
+  .scroll-label {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+  .plus-mark {
+  font-size: 2rem;
+  font-weight: 200;
+}
+}
+
+@media (max-width: 926px) {
+
+}

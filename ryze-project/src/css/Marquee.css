@@ -1,0 +1,30 @@
+/* ── Marquee.css ── */
+
+.marquee-section {
+  background: var(--dark);
+  padding: 28px 0;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 60px;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+.marquee-item {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.marquee-item::after {
+  content: '✦';
+  color: rgba(255, 255, 255, 0.2);
+}
