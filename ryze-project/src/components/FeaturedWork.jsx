@@ -1,4 +1,4 @@
-import "../css/FeaturedWork.css";
+import "../css/Featuredwork.css";
 
 const projects = [
   {
