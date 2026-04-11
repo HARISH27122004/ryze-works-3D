@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import FooterVideo from "../Videos/3D-Video.mp4";
-import '../Css/FooterScrollVideo.css';
+import '../css/FooterScrollVideo.css';
 
 export default function FooterScrollVideo() {
   const videoRef = useRef(null);
