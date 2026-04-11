@@ -1,5 +1,5 @@
 import { splitWords } from "../utils/SplitWords.jsx";
-import "../css/BoldIdeas.css";
+import '../css/BoldIdeas.css'
 import { useEffect, useRef } from "react";
 
 export default function BoldIdeas() {
