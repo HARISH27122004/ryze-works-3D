@@ -28,10 +28,8 @@ export default function App() {
         <BoldIdeas />
         <FeaturedWork />
         <About />
-        <Marquee />
       </main>
 
-      <Footer />
     </>
   );
 }

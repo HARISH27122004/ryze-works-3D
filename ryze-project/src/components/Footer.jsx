@@ -10,7 +10,9 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Address</h4>
           <address>
-            Bazaar Road, Mylapaore
+            <a href="https://www.google.com/maps/place/Ryzeworks/@13.0290526,80.2638882,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52678c4a3ab841:0x8e73699a87334d6b!8m2!3d13.0290474!4d80.2664631!16s%2Fg%2F11z2fx0s7f?hl=en&entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D">
+              Bazaar Road, Mylapore
+              </a>
           </address>
 
           <h4 style={{ marginTop: "32px" }}>General enquiries</h4>

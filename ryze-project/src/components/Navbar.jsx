@@ -5,8 +5,8 @@ import "../css/Navbar.css";
 const NAV_LINKS = ["HOME", "ABOUT US", "PROJECTS", "CONTACT"];
 
 export default function Navbar() {
-  const [scrolled,  setScrolled]  = useState(false);
-  const [menuOpen,  setMenuOpen]  = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [activeIdx, setActiveIdx] = useState(0);   // tracks current page
   const [hoveredIdx, setHoveredIdx] = useState(null); // tracks hover
 
@@ -59,7 +59,7 @@ export default function Navbar() {
           <a href="#" className="menu-talk-link" onClick={() => setMenuOpen(false)}>
             LET'S TALK
           </a>
-          <span className="talk-icon">☰</span>
+          <span className="talk-icon"></span>
         </div>
 
         {/* Labs card */}
@@ -81,7 +81,12 @@ export default function Navbar() {
         <span className="nav-logo">Ryze Works</span>
 
         <div className="nav-right">
-          <button className="btn-talk">LET'S TALK</button>
+          <button className="btn-talk"
+            onClick={() =>
+              (window.location.href = "mailto:hello@ryzeworks.com")
+            }>
+            LET'S TALK
+          </button>
 
           <button className="btn-menu" onClick={() => setMenuOpen(true)}>
             MENU
@@ -90,7 +95,7 @@ export default function Navbar() {
             </span>
           </button>
 
-           <button className="two-dots-btn" onClick={() => setMenuOpen(true)}>
+          <button className="two-dots-btn" onClick={() => setMenuOpen(true)}>
             <span className="two-dots">
               <span /><span />
             </span>

@@ -36,7 +36,7 @@ const PATH_D = `
 `;
 
 const STROKE_LENGTH = 5200;   // set to path.getTotalLength() in browser console for precision
-const STROKE_WIDTH  = 28;     // thick like in the video
+const STROKE_WIDTH  = 50;     // thick like in the video
 const STROKE_COLOR  = "#00e5d4";
 const VIEW_BOX      = "0 0 1920 1100";
 // ─────────────────────────────────────────────────────────────────────────────
@@ -85,6 +85,7 @@ export default function About() {
   }, []);
 
   return (
+    <>
     <section className="about-section" ref={sectionRef}>
 
       {/* ── Full-width scroll-driven SVG curve (behind everything) ── */}
@@ -124,7 +125,7 @@ export default function About() {
               <div className="astronaut-scene">
                 <div className="stars" />
                 <div className="earth-glow" />
-                <FooterScrollVideo/>
+                
               </div>
             </div>
           </div>
@@ -147,5 +148,7 @@ export default function About() {
 
       </div>
     </section>
+                <FooterScrollVideo/>
+</>
   );
 }
